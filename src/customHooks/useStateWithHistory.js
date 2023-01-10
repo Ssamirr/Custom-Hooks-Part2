@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function useStateWithHistory(Value) {
     const [value, setValue] = useState(Value);
     const [history, setHistory] = useState([Value]);
     const [index, setIndex] = useState(0)
+
+    console.log(Value)
 
     const changeValue = (num) => {
         setValue(num);
